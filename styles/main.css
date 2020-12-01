@@ -144,6 +144,23 @@
   margin: 30px 240px;
 }
 
+.fase__info {
+  border-bottom: 3px solid #FF0000;
+  margin: 0 15%;
+}
+
+.fase__title {
+  color: #FF0000;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
+.fase__subtitle {
+  color: #9943E2;
+  font-weight: bolder;
+  font-size: 30px;
+}
+
 .video__btn {
   margin: 10px 10px;
 }

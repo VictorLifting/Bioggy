@@ -1,0 +1,29 @@
+.fase{
+    //background: cadetblue;
+
+
+    &__info{
+      //  background-color: chartreuse;
+        border-bottom: 3px solid #FF0000;
+        margin: 0 15%;
+        
+    }
+
+    &__title{
+        color:#FF0000;
+        font-weight: bolder;
+        font-size: 30px;
+    }
+
+    &__subtitle{
+        color:  #9943E2;
+        font-weight: bolder;
+        font-size: 30px;
+
+    }
+
+    &__description{
+    
+        
+    }
+}
