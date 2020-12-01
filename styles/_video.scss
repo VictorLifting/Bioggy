@@ -1,0 +1,55 @@
+.video{
+    //background-color: yellowgreen;
+
+    &__btn{
+        margin: 10px 10px;
+      //  background-color: aqua;
+    }
+    &__content{
+        position: absolute;
+       // background-color: aquamarine;
+        right: 0px;
+       
+    }
+    &__info{
+        display: flex;
+    }
+    &__title{  
+        color: #9943E2;
+        font-weight: bolder;
+        font-size: 40px;
+        
+    }
+
+    &__img{
+        margin: 0px;
+        //background-color: burlywood;
+    }
+
+    &__video1{
+        //background-color: blanchedalmond;
+        width: 300px;
+        height: 300px;
+    }
+
+
+    &__container{
+    margin-right: 0px;
+    //background-color: brown;
+    }
+
+    &__progress{
+        margin-left: 0px;
+    }
+
+    &__txts{
+
+        margin: auto 40px;
+    }
+    
+    &__txt1{
+        color: #9943E2;
+        font-weight: bolder;
+        font-size: 25px;
+    }
+}

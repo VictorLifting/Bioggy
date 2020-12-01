@@ -1,0 +1,32 @@
+.topics{
+
+
+
+    margin: auto 20%; 
+
+    &__texts{
+        color: #9943E2;
+        font-weight: bolder;
+        font-size: 40px;
+    }
+
+    &__text{
+
+        margin: 20px 0px;
+
+    }
+
+    &__info{
+    flex-wrap: wrap;
+   // background-color: lightcoral;
+    display: flex;
+    }
+
+
+
+    &--systems{
+        
+        margin: auto 25%;
+
+    }
+}
