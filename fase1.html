@@ -1,59 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
     <title>Bioggy</title>
 </head>
+
 <body>
-<div class="banner">
+    <div class="banner">
 
 
         <img src="./src/imgs/Bioggy.png" alt="logo" class="banner__logo">
 
 
-    <div class="banner__user">
+        <div class="banner__user">
 
-        <div class="banner__info">
+            <div class="banner__info">
 
-            <p class="name"> David Orozco</p>
+                <p class="name"> David Orozco</p>
 
-            <p>Puntaje: <span class="points">1200 px</span></p>
+                <p>Puntaje: <span class="points">1200 px</span></p>
+
+            </div>
+            <div class="banner__profile">
+                <img src="./src/imgs/perfil.png" alt="perfil">
+
+            </div>
 
         </div>
-        <div class="banner__profile">
-            <img src="./src/imgs/perfil.png" alt="perfil">
 
-        </div>
 
     </div>
-
-
-</div>
 
 
     <div class="fase">
         <div class="video__btn">
-        <button class="btn btn--back">Atrás</button>
+            <button class="btn btn--back">Atrás</button>
+        </div>
+
+        <div class="fase__info">
+            <p class="fase__title">Fase 1</p>
+            <p class="fase__subtitle">Boca, glándula, faringe, esófago </p>
+            <p class="fase__description"> Arrastra las siguientes opciones a su casilla correspondiente</p>
+
+        </div>
+
+
+        <div class="interaction">
+            <div class="interaction__opciones">
+                <div class="interaction__opciones__opcion">
+                    Es donde de produce la masticación y la salivación. los dientes se encargan de cortar y triturar los
+                    alimentos
+                </div>
+                <div>
+                    <div id="1" class="interaction__opciones__opcion">
+                        Hígado
+                    </div>
+                    <div class="interaction__opciones__opcion">
+                        Glándulas Salivales
+                    </div>
+                </div>
+
+                <div class="interaction__opciones__opcion">
+                    Es donde se producen la saliva para ablandar los alimentos
+                </div>
+                <div>
+                    <div class="interaction__opciones__opcion">
+                        Faringe
+                    </div>
+                    <div class="interaction__opciones__opcion">
+                        Boca
+                    </div>
+                </div>
+                <div class="interaction__opciones__opcion">
+                    Absorbe la mayor parte del material que ingieren los seres humanos.
+                </div>
+
+            </div>
+            <div class="interaction__img">
+                <img style="left:300px; top:100px" src="/src/imgs/fase1/cuerpo-humano.png" alt="">
+                <div id="1" style="left:215px; top:160px" class="interaction__img__respuesta"></div>
+                <div id="1" style="left:10px; top:160px" class="interaction__img__respuesta"></div>
+                <div id="2" style="left:635px; top:120px" class="interaction__img__respuesta"></div>
+                <div id="2" style="left:845px; top:120px" class="interaction__img__respuesta"></div>
+                <div id="3" style="left:635px; top:224px" class="interaction__img__respuesta"></div>
+                <div id="3" style="left:845px; top:224px" class="interaction__img__respuesta"></div>
+                <div id="4" style="left:635px; top:300px" class="interaction__img__respuesta"></div>
+                <div id="4" style="left:845px; top:300px" class="interaction__img__respuesta"></div>
+
+            </div>
+
+            <div class="video__btn">
+                <button class="btn btn--next">Siguiente</button>
+            </div>
+
+        </div>
+
+        <button id="modal-btn" class="button">Click Here</button>
+
+  <div id="my-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>¡Felicitaciones!</h2>
+      </div>
+      <div class="modal-body">
+          <img src="./src/imgs/logros/logro.png" alt="logro" class="logro-img">
+          
+        <p> <b>Has obtenido un nuevo logro </b>   </p>
+        <!--
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa velit
+          repudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemo
+          commodi ab.</p>
+        -->
+      </div>
+      <!--
+      <div class="modal-footer">
+        <h3>Modal Footer</h3>
+      </div>
+      -->
     </div>
-
-    <div class="fase__info">
-        <p class="fase__title">Fase 1</p>
-        <p class="fase__subtitle">Boca, glándula, faringe, esófago </p>
-        <p class="fase__description"> Arrastra las siguientes opciones a su casilla correspondiente</p>
+  </div>
 
     </div>
-
-
-    <div class="interaction">
-
-    </div>
-
-</div>
 
 
 
 </body>
 <script src="./scripts/fase1.js"></script>
-</html>  
+<script src="./scripts/modal.js"></script>
+<script src="./scripts/drag.js"></script>
+
+
+<script>
+
+
+        ////MODAL-----------
+
+
+    // Get DOM Elements
+const modal = document.querySelector('#my-modal');
+const modalBtn = document.querySelector('#modal-btn');
+const closeBtn = document.querySelector('.close');
+
+// Events
+modalBtn.addEventListener('click', openModal);
+closeBtn.addEventListener('click', closeModal);
+window.addEventListener('click', outsideClick);
+
+// Open
+function openModal() {
+  modal.style.display = 'block';
+}
+
+// Close
+function closeModal() {
+  modal.style.display = 'none';
+}
+
+// Close If Outside Click
+function outsideClick(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+}
+
+
+
+
+//DRAG AND DROP--------------------------------------
+
+
+
+
+    var interaction__opciones = document.querySelectorAll(".interaction__opciones__opcion");
+    var interaction__respuestas = document.querySelectorAll(".interaction__img__respuesta");
+    var containerOpciones = document.querySelector(".interaction__opciones");
+
+    console.log(interaction__opciones)
+
+    var managerDrap = new DragAndDrop();
+
+    managerDrap.addDrag(interaction__opciones);
+    managerDrap.addDrop(interaction__respuestas);
+    managerDrap.addDrop([containerOpciones])
+
+    managerDrap.setOnDrog((elementoDrop, elementoSelect) => {
+        if (elementoDrop.className === "interaction__opciones") {
+            elementoDrop.appendChild(elementoSelect)
+        } else {
+            if (elementoDrop.childNodes.length === 0) {
+                if (elementoSelect.id === elementoDrop.id) {
+                   console.log("hola")
+                   modal.style.display = 'block';
+                }else{
+                    //Es incorrecto
+                }
+                elementoDrop.appendChild(elementoSelect)
+            }
+        }
+
+    })
+
+
+
+
+
+
+
+</script>
+
+</html>
