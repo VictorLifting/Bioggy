@@ -48,12 +48,76 @@
 
     <div class="interaction">
 
+
+        <ul>
+            <li>
+                <p> El recto es una cavidad que comieza al final del 
+                    <select name="order">
+                    <option value="">Selecciona una opción</option>
+                    <option value="price_asc">Precio menor a mayor</option>
+                    <option value="price_desc">Precio mayor a menor</option>
+                    <option value="alfabeticA">A-Z</option>
+                    <option value="alfabeticZ">Z-A</option>
+                  </select> Y termina en el <select name="order">
+                    <option value="">Selecciona una opción</option>
+                    <option value="price_asc">Precio menor a mayor</option>
+                    <option value="price_desc">Precio mayor a menor</option>
+                    <option value="alfabeticA">A-Z</option>
+                    <option value="alfabeticZ">Z-A</option> </select></p>
+            </li>
+            <li>
+                <p>El recto está vacío porque las heces no se almacenan éste, sino en el
+                    <select name="order">
+                    <option value="">Selecciona una opción</option>
+                    <option value="price_asc">Precio menor a mayor</option>
+                    <option value="price_desc">Precio mayor a menor</option>
+                    <option value="alfabeticA">A-Z</option>
+                    <option value="alfabeticZ">Z-A</option> </select> </p>
+
+            </li>
+            <li>
+               <p>Los adultos y los niños mayores pueden aguantar la necesidad de defecar hasta llegar a un inodoro,<br> mientras que los <select name="order">
+                <option value="">Selecciona una opción</option>
+                <option value="price_asc">Precio menor a mayor</option>
+                <option value="price_desc">Precio mayor a menor</option>
+                <option value="alfabeticA">A-Z</option>
+                <option value="alfabeticZ">Z-A</option> </select> carecen del control muscular necesario para retrasarlo.  </p> 
+                
+            </li>
+
+        </ul>
+
+        
+
+        <div class="video__btn">
+
+            <button class="btn btn--next">Siguiente</button>
+        </div>
     </div>
+
 
 </div>
 
 
 
 </body>
-<script src="./scripts/fase7.js"></script>
+
+<script>
+     //botones----------------------------
+     const next= document.querySelector('.btn--next');
+    const back= document.querySelector('.btn--back');
+
+   next.addEventListener('click',function(){
+   window.location.href="video8.html";
+    });
+
+
+    back.addEventListener('click',function(){
+    window.location.href="video7.html";
+    });
+
+
+
+
+</script>
 </html>  

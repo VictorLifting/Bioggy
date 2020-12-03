@@ -47,6 +47,66 @@
 
 
     <div class="interaction">
+        
+        <div class="interaction__opciones">
+
+            <div>
+                <div id="1" class="interaction__opciones__opcion">
+                    Administra
+                </div>
+                <div class="interaction__opciones__opcion">
+                    El esfínger Inferior
+                </div>
+            </div>
+
+            <div>
+                <div class="interaction__opciones__opcion">
+                    Estómago
+                </div>
+                <div class="interaction__opciones__opcion">
+                    El esfínger Pilórico
+                </div>
+            </div>
+            <div>
+                <div class="interaction__opciones__opcion">
+                    Esófago
+                </div>
+                <div class="interaction__opciones__opcion">
+                    Descomponer
+                </div>
+            </div>
+            <div>
+                <div class="interaction__opciones__opcion">
+                    Intestino Delgado
+                </div>
+                <div class="interaction__opciones__opcion">
+                    Estómago
+                </div>
+            </div>
+            
+
+        </div>
+        <div class="interaction__img">
+         
+            <img style="left:300px; top:100px" src="/src/imgs/fase4/respuestas.png" alt="">
+    
+            <div id="2" style="left:665px; top:133px" class="interaction__img__respuesta__2"></div>
+            <div id="2" style="left:1194px; top:132px" class="interaction__img__respuesta__2"></div>
+
+            <div id="3" style="left:685px; top:162px" class="interaction__img__respuesta__2"></div>
+            <div id="4" style="left:682px; top:228px" class="interaction__img__respuesta__2"></div>
+            
+            <div id="4" style="left:775px; top:327px" class="interaction__img__respuesta__2"></div>
+            <div id="4" style="left:1084px; top:229px" class="interaction__img__respuesta__2"></div>
+            <div id="4" style="left:978px; top:298px" class="interaction__img__respuesta__2"></div>
+            <div id="4" style="left:667px; top:300px" class="interaction__img__respuesta__2"></div>
+
+
+        </div>
+
+        <div class="video__btn">
+            <button class="btn btn--next">Siguiente</button>
+        </div>
 
     </div>
 
@@ -55,5 +115,57 @@
 
 
 </body>
-<script src="./scripts/fase4.js"></script>
+
+<script src="./scripts/drag.js"></script>
+
+
+<script>
+    //botones----------------------------
+    const next= document.querySelector('.btn--next');
+    const back= document.querySelector('.btn--back');
+
+    next.addEventListener('click',function(){
+    window.location.href="video5.html";
+    });
+
+
+    back.addEventListener('click',function(){
+    window.location.href="video4.html";
+    });
+
+
+
+    ///drag and drop
+
+    
+    var interaction__opciones = document.querySelectorAll(".interaction__opciones__opcion");
+    var interaction__respuestas = document.querySelectorAll(".interaction__img__respuesta__2");
+    var containerOpciones = document.querySelector(".interaction__opciones");
+
+    console.log(interaction__opciones)
+
+    var managerDrap = new DragAndDrop();
+
+    managerDrap.addDrag(interaction__opciones);
+    managerDrap.addDrop(interaction__respuestas);
+    managerDrap.addDrop([containerOpciones])
+
+    managerDrap.setOnDrog((elementoDrop, elementoSelect) => {
+        if (elementoDrop.className === "interaction__opciones") {
+            elementoDrop.appendChild(elementoSelect)
+        } else {
+            if (elementoDrop.childNodes.length === 0) {
+                if (elementoSelect.id === elementoDrop.id) {
+                    //Es el correcto
+                }else{
+                    //Es incorrecto
+                }
+                elementoDrop.appendChild(elementoSelect)
+            }
+        }
+
+    })
+
+
+</script>
 </html>  

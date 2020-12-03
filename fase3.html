@@ -48,12 +48,98 @@
 
     <div class="interaction">
 
+        <div>
+            <p> <b>¿Cuáles son las dos (2) funciones principales del páncreas en el proceso de la digestión que concuerda con estos enunciados?  </b>  </p>
+        </div>
+
+
+
+    
+            <div class="interaction__opciones">
+
+                <div>
+                    <div id="1" class="interaction__opciones__opcion">
+                        Función Exocrina
+                    </div>
+                    <div class="interaction__opciones__opcion">
+                        Función Pituitaria
+                    </div>
+                </div>
+
+                <div>
+                    <div class="interaction__opciones__opcion">
+                        Función Hipófisis
+                    </div>
+                    <div class="interaction__opciones__opcion">
+                        Función Endocrina
+                    </div>
+                </div>
+                <div>
+                    <div class="interaction__opciones__opcion">
+                        Función Paratiroides
+                    </div>
+                    <div class="interaction__opciones__opcion">
+                        Función------
+                    </div>
+                </div>
+                
+
+            </div>
+            <div class="interaction__img">
+             
+                <img style="left:300px; top:100px" src="/src/imgs/fase3/respuestas.png" alt="">
+                <div id="1" style="left:718px; top:90px" class="interaction__img__respuesta"></div>
+                <div id="2" style="left:337px; top:94px" class="interaction__img__respuesta"></div>
+
+
+            </div>
+
+            <div class="video__btn">
+                <button class="btn btn--next">Siguiente</button>
+            </div>
+
+        </div>
+
+
     </div>
 
-</div>
+
 
 
 
 </body>
 <script src="./scripts/fase3.js"></script>
+<script src="./scripts/drag.js"></script>
+
+<script>
+
+    var interaction__opciones = document.querySelectorAll(".interaction__opciones__opcion");
+    var interaction__respuestas = document.querySelectorAll(".interaction__img__respuesta");
+    var containerOpciones = document.querySelector(".interaction__opciones");
+
+    console.log(interaction__opciones)
+
+    var managerDrap = new DragAndDrop();
+
+    managerDrap.addDrag(interaction__opciones);
+    managerDrap.addDrop(interaction__respuestas);
+    managerDrap.addDrop([containerOpciones])
+
+    managerDrap.setOnDrog((elementoDrop, elementoSelect) => {
+        if (elementoDrop.className === "interaction__opciones") {
+            elementoDrop.appendChild(elementoSelect)
+        } else {
+            if (elementoDrop.childNodes.length === 0) {
+                if (elementoSelect.id === elementoDrop.id) {
+                    //Es el correcto
+                }else{
+                    //Es incorrecto
+                }
+                elementoDrop.appendChild(elementoSelect)
+            }
+        }
+
+    })
+
+</script>
 </html>  

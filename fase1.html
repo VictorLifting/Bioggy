@@ -81,13 +81,13 @@
             </div>
             <div class="interaction__img">
                 <img style="left:300px; top:100px" src="/src/imgs/fase1/cuerpo-humano.png" alt="">
-                <div id="1" style="left:215px; top:160px" class="interaction__img__respuesta"></div>
+                <div id="1" style="left:245px; top:160px" class="interaction__img__respuesta__2"></div>
                 <div id="1" style="left:10px; top:160px" class="interaction__img__respuesta"></div>
-                <div id="2" style="left:635px; top:120px" class="interaction__img__respuesta"></div>
+                <div id="2" style="left:635px; top:120px" class="interaction__img__respuesta__2"></div>
                 <div id="2" style="left:845px; top:120px" class="interaction__img__respuesta"></div>
-                <div id="3" style="left:635px; top:224px" class="interaction__img__respuesta"></div>
+                <div id="3" style="left:635px; top:224px" class="interaction__img__respuesta__2"></div>
                 <div id="3" style="left:845px; top:224px" class="interaction__img__respuesta"></div>
-                <div id="4" style="left:635px; top:300px" class="interaction__img__respuesta"></div>
+                <div id="4" style="left:635px; top:300px" class="interaction__img__respuesta__2"></div>
                 <div id="4" style="left:845px; top:300px" class="interaction__img__respuesta"></div>
 
             </div>
@@ -177,6 +177,7 @@ function outsideClick(e) {
 
     var interaction__opciones = document.querySelectorAll(".interaction__opciones__opcion");
     var interaction__respuestas = document.querySelectorAll(".interaction__img__respuesta");
+    var interaction__respuestas__2 = document.querySelectorAll(".interaction__img__respuesta__2");
     var containerOpciones = document.querySelector(".interaction__opciones");
 
     console.log(interaction__opciones)
@@ -185,6 +186,7 @@ function outsideClick(e) {
 
     managerDrap.addDrag(interaction__opciones);
     managerDrap.addDrop(interaction__respuestas);
+    managerDrap.addDrop(interaction__respuestas__2);
     managerDrap.addDrop([containerOpciones])
 
     managerDrap.setOnDrog((elementoDrop, elementoSelect) => {
