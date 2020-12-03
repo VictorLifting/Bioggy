@@ -1,5 +1,5 @@
-const next= document.querySelector('.intro__start');
-const back= document.querySelector('.intro__back');
+const next= document.querySelector('.btn--next');
+const back= document.querySelector('.btn--back');
 
 next.addEventListener('click',function(){
 window.location.href="video1.html";

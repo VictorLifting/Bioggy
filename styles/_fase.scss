@@ -1,6 +1,5 @@
 .fase {
     //background: cadetblue;
-
     &__info {
         //  background-color: chartreuse;
         border-bottom: 3px solid #ff0000;
@@ -25,7 +24,7 @@
     .interaction {
 
         &__opciones {
-            margin: auto 10%;
+            margin: auto 20%;
             background-color: rgb(245, 245, 245);
             display: inline-flex;
             flex-wrap: wrap;
@@ -43,7 +42,7 @@
         &__img {
             position: relative;
             width: 100%;
-            height: 500px;
+            height: 400px;
 
             &__respuesta {
                 border-radius: 10px;
@@ -58,6 +57,18 @@
                     min-width: 90px;
                     min-height: 25px;
 
+                    & > * {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        
+                        margin: 0;
+                        //width: 100%;
+                        height: 100%;
+                        padding: 3.3px;
+                    }
+
+
                 }
             }
 
@@ -66,4 +77,8 @@
             }
         }
     }
+}
+
+.lista{
+    margin: 6% 20%;
 }

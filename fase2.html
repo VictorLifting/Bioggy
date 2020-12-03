@@ -34,9 +34,7 @@
 
 
     <div class="fase">
-        <div class="video__btn">
-        <button class="btn btn--back">Atrás</button>
-    </div>
+
 
     <div class="fase__info">
         <p class="fase__title">Fase 2</p>
@@ -49,36 +47,36 @@
     <div class="interaction">
         <div class="interaction__opciones" >
             <div>
-                <div id="1" class="interaction__opciones__opcion">
+                <div id="5" class="interaction__opciones__opcion">
                     Enzimas
                 </div>
-                <div class="interaction__opciones__opcion">
+                <div id="3" class="interaction__opciones__opcion">
                     Frutos secos
                 </div>
             </div>
 
             <div>
-                <div id="1" class="interaction__opciones__opcion">
+                <div id="11" class="interaction__opciones__opcion">
                     Hígado
                 </div>
-                <div class="interaction__opciones__opcion">
+                <div id="10" class="interaction__opciones__opcion">
                     Glucógeno
                 </div>
             </div>
 
             <div>
-                <div id="1" class="interaction__opciones__opcion">
+                <div id="8" class="interaction__opciones__opcion">
                     Vitaminas
                 </div>
-                <div class="interaction__opciones__opcion">
+                <div id="2" class="interaction__opciones__opcion">
                     Carne
                 </div>
             </div>
             <div>
-                <div class="interaction__opciones__opcion">
+                <div id="4" class="interaction__opciones__opcion">
                     Bilis
                 </div>
-                <div class="interaction__opciones__opcion">
+                <div id="1" class="interaction__opciones__opcion">
                     Toxinas
                 </div>
 
@@ -88,13 +86,13 @@
                 <div class="interaction__opciones__opcion">
                     Bolo alimenticio
                 </div>
-                <div class="interaction__opciones__opcion">
+                <div id="7" class="interaction__opciones__opcion">
                     Ácidos grasos
                 </div>
 
             </div>
             <div>
-                <div class="interaction__opciones__opcion">
+                <div id="9" class="interaction__opciones__opcion">
                     Minerales
                 </div>
                 <div class="interaction__opciones__opcion">
@@ -103,10 +101,10 @@
                 
             </div>
             <div>
-                <div class="interaction__opciones__opcion">
+                <div id="8" class="interaction__opciones__opcion">
                     Minerales
                 </div>
-                <div class="interaction__opciones__opcion">
+                <div id="6" class="interaction__opciones__opcion">
                     Grasas
                 </div>
                 
@@ -115,22 +113,24 @@
         </div>
         <div class="interaction__img">
             <img style="left:300px; top:100px" src="/src/imgs/fase2/Higado.png" alt="">
-            <div id="1" style="left:511px; top:207px" class="interaction__img__respuesta__2"></div>
-            <div id="2" style="left:737px; top:111px" class="interaction__img__respuesta__2"></div>
+            <div id="11" style="left:511px; top:207px" class="interaction__img__respuesta__2"></div>
+            <div id="1" style="left:737px; top:111px" class="interaction__img__respuesta__2"></div>
             <div id="2" style="left:1034px; top:111px" class="interaction__img__respuesta__2"></div>
             <div id="3" style="left:1150px; top:111px" class="interaction__img__respuesta__2"></div>
-            <div id="3" style="left:720px; top:170px" class="interaction__img__respuesta__2"></div>
-            <div id="4" style="left:663px; top:203px" class="interaction__img__respuesta__2"></div>
-            <div id="4" style="left:994px; top:205px" class="interaction__img__respuesta__2"></div>
-            <div id="4" style="left:1115px; top:205px" class="interaction__img__respuesta__2"></div>
-            <div id="4" style="left:950px; top:259px" class="interaction__img__respuesta__2"></div>
-            <div id="4" style="left:1059px; top:259px" class="interaction__img__respuesta__2"></div>
-            <div id="4" style="left:672px; top:313px" class="interaction__img__respuesta__2"></div>
+            <div id="4" style="left:720px; top:170px" class="interaction__img__respuesta__2"></div>
+            <div id="5" style="left:663px; top:203px" class="interaction__img__respuesta__2"></div>
+            <div id="6" style="left:994px; top:205px" class="interaction__img__respuesta__2"></div>
+            <div id="7" style="left:1115px; top:205px" class="interaction__img__respuesta__2"></div>
+            <div id="8" style="left:950px; top:259px" class="interaction__img__respuesta__2"></div>
+            <div id="9" style="left:1059px; top:259px" class="interaction__img__respuesta__2"></div>
+            <div id="10" style="left:672px; top:313px" class="interaction__img__respuesta__2"></div>
 
         </div>
 
-        <div class="video__btn">
-            <button class="btn btn--next">Siguiente</button>
+        <div class="video__btn__2">
+            <img src="./src/imgs/back.svg" alt="" class="btn btn--back">
+            <img src="./src/imgs/next.svg" alt="" class="btn btn--next">
+            
         </div>
 
     </div>
@@ -165,7 +165,7 @@
         } else {
             if (elementoDrop.childNodes.length === 0) {
                 if (elementoSelect.id === elementoDrop.id) {
-                    //Es el correcto
+                   console.log("+1")
                 }else{
                     //Es incorrecto
                 }

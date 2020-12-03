@@ -34,9 +34,7 @@
 
 
     <div class="fase">
-        <div class="video__btn">
-        <button class="btn btn--back">Atrás</button>
-    </div>
+
 
     <div class="fase__info">
         <p class="fase__title">Fase 5</p>
@@ -49,11 +47,11 @@
     <div class="interaction">
 
         <div class="interaction__opciones">
-            <div class="interaction__opciones__opcion">
+            <div id="6"  class="interaction__opciones__opcion">
                 Cumple con funciones de secreción, absorción y motilidad, que completan el procesado de nutrientes
             </div>
             <div>
-                <div id="1" class="interaction__opciones__opcion">
+                <div id="3" class="interaction__opciones__opcion">
                     Yeyuno  
                 </div>
                 <div class="interaction__opciones__opcion">
@@ -61,36 +59,39 @@
                 </div>
             </div>
 
-            <div class="interaction__opciones__opcion">
+            <div  id="2"  class="interaction__opciones__opcion">
                 Se encuentra fijo, y está formado totalmente por músculo liso.
             </div>
             <div>
-                <div class="interaction__opciones__opcion">
+                <div id="1" class="interaction__opciones__opcion">
                     Duodeno
                 </div>
-                <div class="interaction__opciones__opcion">
+                <div id="5" class="interaction__opciones__opcion">
                     Ileón
                 </div>
             </div>
-            <div class="interaction__opciones__opcion">
+            <div id="4" class="interaction__opciones__opcion">
                 Presenta vellosidades que absorben los nutrientes hacia la vena intestinal para ir a parar a la sangre.
             </div>
 
         </div>
         <div class="interaction__img">
             <img style="left:550px; top:100px" src="/src/imgs/fase5/respuestas.png" alt="">
-            <div id="1" style="left:365px; top:300px" class="interaction__img__respuesta__2"></div>
-            <div id="1" style="left:120px; top:300px" class="interaction__img__respuesta"></div>
-            <div id="2" style="left:835px; top:120px" class="interaction__img__respuesta__2"></div>
-            <div id="2" style="left:1045px; top:120px" class="interaction__img__respuesta"></div>
+            <div id="1" style="left:867px; top:134px" class="interaction__img__respuesta__2"></div>
+            <div id="2" style="left:867px; top:164px" class="interaction__img__respuesta"></div>
+            <div id="3" style="left:835px; top:300px" class="interaction__img__respuesta__2"></div>
+            <div id="4" style="left:835px; top:328px" class="interaction__img__respuesta"></div>
 
-            <div id="4" style="left:835px; top:300px" class="interaction__img__respuesta__2"></div>
-            <div id="4" style="left:1045px; top:300px" class="interaction__img__respuesta"></div>
+            <div id="5" style="left:458px; top:190px" class="interaction__img__respuesta__2"></div>
+            <div id="6" style="left:350px; top:223px" class="interaction__img__respuesta"></div>
 
         </div>
 
-        <div class="video__btn">
-            <button class="btn btn--next">Siguiente</button>
+
+        <div class="video__btn__2">
+            <img src="./src/imgs/back.svg" alt="" class="btn btn--back">
+            <img src="./src/imgs/next.svg" alt="" class="btn btn--next">
+            
         </div>
 
 
@@ -146,6 +147,7 @@
             if (elementoDrop.childNodes.length === 0) {
                 if (elementoSelect.id === elementoDrop.id) {
                     //Es el correcto
+                    console.log("+1 ") ;
                 }else{
                     //Es incorrecto
                 }

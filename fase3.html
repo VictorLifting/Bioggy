@@ -34,9 +34,7 @@
 
 
     <div class="fase">
-        <div class="video__btn">
-        <button class="btn btn--back">Atrás</button>
-    </div>
+
 
     <div class="fase__info">
         <p class="fase__title">Fase 3</p>
@@ -48,17 +46,18 @@
 
     <div class="interaction">
 
-        <div>
-            <p> <b>¿Cuáles son las dos (2) funciones principales del páncreas en el proceso de la digestión que concuerda con estos enunciados?  </b>  </p>
-        </div>
+       
 
 
 
     
             <div class="interaction__opciones">
+                <div>
+                    <p> <b>¿Cuáles son las dos (2) funciones principales del páncreas en el proceso de la digestión que concuerdan con estos enunciados?  </b>  </p>
+                </div>
 
                 <div>
-                    <div id="1" class="interaction__opciones__opcion">
+                    <div id="2" class="interaction__opciones__opcion">
                         Función Exocrina
                     </div>
                     <div class="interaction__opciones__opcion">
@@ -70,7 +69,7 @@
                     <div class="interaction__opciones__opcion">
                         Función Hipófisis
                     </div>
-                    <div class="interaction__opciones__opcion">
+                    <div id="1" class="interaction__opciones__opcion">
                         Función Endocrina
                     </div>
                 </div>
@@ -88,14 +87,16 @@
             <div class="interaction__img">
              
                 <img style="left:300px; top:100px" src="/src/imgs/fase3/respuestas.png" alt="">
-                <div id="1" style="left:718px; top:90px" class="interaction__img__respuesta"></div>
-                <div id="2" style="left:337px; top:94px" class="interaction__img__respuesta"></div>
+                <div id="1" style="left:718px; top:90px" class="interaction__img__respuesta__2"></div>
+                <div id="2" style="left:337px; top:94px" class="interaction__img__respuesta__2"></div>
 
 
             </div>
 
-            <div class="video__btn">
-                <button class="btn btn--next">Siguiente</button>
+            <div class="video__btn__2">
+                <img src="./src/imgs/back.svg" alt="" class="btn btn--back">
+                <img src="./src/imgs/next.svg" alt="" class="btn btn--next">
+                
             </div>
 
         </div>
@@ -114,7 +115,7 @@
 <script>
 
     var interaction__opciones = document.querySelectorAll(".interaction__opciones__opcion");
-    var interaction__respuestas = document.querySelectorAll(".interaction__img__respuesta");
+    var interaction__respuestas = document.querySelectorAll(".interaction__img__respuesta__2");
     var containerOpciones = document.querySelector(".interaction__opciones");
 
     console.log(interaction__opciones)
@@ -132,6 +133,7 @@
             if (elementoDrop.childNodes.length === 0) {
                 if (elementoSelect.id === elementoDrop.id) {
                     //Es el correcto
+                    console.log("+1")
                 }else{
                     //Es incorrecto
                 }

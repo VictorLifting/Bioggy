@@ -34,9 +34,7 @@
 
 
     <div class="fase">
-        <div class="video__btn">
-        <button class="btn btn--back">Atrás</button>
-    </div>
+
 
     <div class="fase__info">
         <p class="fase__title">Fase 4</p>
@@ -51,35 +49,35 @@
         <div class="interaction__opciones">
 
             <div>
-                <div id="1" class="interaction__opciones__opcion">
+                <div id="6" class="interaction__opciones__opcion">
                     Administra
                 </div>
-                <div class="interaction__opciones__opcion">
+                <div id="1" class="interaction__opciones__opcion">
                     El esfínger Inferior
                 </div>
             </div>
 
             <div>
-                <div class="interaction__opciones__opcion">
+                <div id="3" class="interaction__opciones__opcion">
                     Estómago
                 </div>
-                <div class="interaction__opciones__opcion">
+                <div id="5" class="interaction__opciones__opcion">
                     El esfínger Pilórico
                 </div>
             </div>
             <div>
-                <div class="interaction__opciones__opcion">
+                <div id="2" class="interaction__opciones__opcion">
                     Esófago
                 </div>
-                <div class="interaction__opciones__opcion">
+                <div id="4" class="interaction__opciones__opcion">
                     Descomponer
                 </div>
             </div>
             <div>
-                <div class="interaction__opciones__opcion">
+                <div id="7" class="interaction__opciones__opcion">
                     Intestino Delgado
                 </div>
-                <div class="interaction__opciones__opcion">
+                <div id="3" class="interaction__opciones__opcion">
                     Estómago
                 </div>
             </div>
@@ -90,22 +88,25 @@
          
             <img style="left:300px; top:100px" src="/src/imgs/fase4/respuestas.png" alt="">
     
-            <div id="2" style="left:665px; top:133px" class="interaction__img__respuesta__2"></div>
+            <div id="1" style="left:665px; top:133px" class="interaction__img__respuesta__2"></div>
             <div id="2" style="left:1194px; top:132px" class="interaction__img__respuesta__2"></div>
 
             <div id="3" style="left:685px; top:162px" class="interaction__img__respuesta__2"></div>
-            <div id="4" style="left:682px; top:228px" class="interaction__img__respuesta__2"></div>
+            <div id="3" style="left:682px; top:228px" class="interaction__img__respuesta__2"></div>
             
-            <div id="4" style="left:775px; top:327px" class="interaction__img__respuesta__2"></div>
+            <div id="7" style="left:775px; top:327px" class="interaction__img__respuesta__2"></div>
             <div id="4" style="left:1084px; top:229px" class="interaction__img__respuesta__2"></div>
-            <div id="4" style="left:978px; top:298px" class="interaction__img__respuesta__2"></div>
-            <div id="4" style="left:667px; top:300px" class="interaction__img__respuesta__2"></div>
+            <div id="6" style="left:978px; top:298px" class="interaction__img__respuesta__2"></div>
+            <div id="5" style="left:667px; top:300px" class="interaction__img__respuesta__2"></div>
 
 
         </div>
 
-        <div class="video__btn">
-            <button class="btn btn--next">Siguiente</button>
+
+        <div class="video__btn__2">
+            <img src="./src/imgs/back.svg" alt="" class="btn btn--back">
+            <img src="./src/imgs/next.svg" alt="" class="btn btn--next">
+            
         </div>
 
     </div>
@@ -157,6 +158,7 @@
             if (elementoDrop.childNodes.length === 0) {
                 if (elementoSelect.id === elementoDrop.id) {
                     //Es el correcto
+                    console.log("+1")
                 }else{
                     //Es incorrecto
                 }
