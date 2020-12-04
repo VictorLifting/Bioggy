@@ -90,7 +90,7 @@
 
         <div class="video__btn__2">
             <img src="./src/imgs/back.svg" alt="" class="btn btn--back">
-            <img src="./src/imgs/next.svg" alt="" class="btn btn--next">
+            <img src="./src/imgs/next.svg" alt="" class="btn btn--next hidden">
             
         </div>
 
@@ -108,6 +108,30 @@
 
 
 <script>
+
+
+    //contador respuestas
+
+    const nextbtn = document.querySelector('.btn--next');
+
+
+    var respuestas = 0;
+
+
+    function contarRespuestas(){
+
+if(respuestas===6){
+
+console.log("siguientes")
+nextbtn.classList.remove('hidden');
+
+}
+
+}
+
+
+
+
     //botones----------------------------
     const next= document.querySelector('.btn--next');
     const back= document.querySelector('.btn--back');
@@ -148,8 +172,12 @@
                 if (elementoSelect.id === elementoDrop.id) {
                     //Es el correcto
                     console.log("+1 ") ;
+                    respuestas+=1;
+                   contarRespuestas()
                 }else{
                     //Es incorrecto
+                    respuestas+=1;
+                   contarRespuestas()
                 }
                 elementoDrop.appendChild(elementoSelect)
             }

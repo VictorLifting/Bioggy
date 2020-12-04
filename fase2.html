@@ -129,7 +129,8 @@
 
         <div class="video__btn__2">
             <img src="./src/imgs/back.svg" alt="" class="btn btn--back">
-            <img src="./src/imgs/next.svg" alt="" class="btn btn--next">
+
+            <img src="./src/imgs/next.svg" alt="" class="btn btn--next hidden">
             
         </div>
 
@@ -146,6 +147,27 @@
 
 
 <script>
+
+
+
+    //contador respuestas
+
+    const nextbtn = document.querySelector('.btn--next');
+
+
+    var respuestas = 0;
+
+
+    function contarRespuestas(){
+
+if(respuestas===11){
+
+console.log("siguientes")
+nextbtn.classList.remove('hidden');
+
+}
+
+}
 
     var interaction__opciones = document.querySelectorAll(".interaction__opciones__opcion");
     var interaction__respuestas = document.querySelectorAll(".interaction__img__respuesta__2");
@@ -166,8 +188,12 @@
             if (elementoDrop.childNodes.length === 0) {
                 if (elementoSelect.id === elementoDrop.id) {
                    console.log("+1")
+                   respuestas+=1;
+                   contarRespuestas()
                 }else{
                     //Es incorrecto
+                    respuestas+=1;
+                   contarRespuestas()
                 }
                 elementoDrop.appendChild(elementoSelect)
             }

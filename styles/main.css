@@ -380,4 +380,8 @@ body {
 .logo-Index {
   margin: auto 0;
 }
+
+.hidden {
+  display: none;
+}
 /*# sourceMappingURL=main.css.map */

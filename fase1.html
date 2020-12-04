@@ -92,7 +92,7 @@
 
             <div class="video__btn__2">
                 <img src="./src/imgs/back.svg" alt="" class="btn btn--back">
-                <img src="./src/imgs/next.svg" alt="" class="btn btn--next">
+                <img src="./src/imgs/next.svg" alt="" class="btn btn--next hidden">
                 
             </div>
 
@@ -135,6 +135,31 @@
 
 
 <script>
+
+    //contador respuestas
+
+    const nextbtn = document.querySelector('.btn--next');
+
+
+    var respuestas = 0;
+
+
+    function contarRespuestas(){
+
+if(respuestas===8){
+
+console.log("siguientes")
+nextbtn.classList.remove('hidden');
+
+}
+
+}
+
+
+    
+
+
+
 
 
         ////MODAL-----------
@@ -195,16 +220,22 @@ function outsideClick(e) {
         } else {
             if (elementoDrop.childNodes.length === 0) {
                 if (elementoSelect.id === elementoDrop.id) {
-                   console.log("hola")
+                   console.log(respuestas)
                    modal.style.display = 'block';
+                   respuestas+=1;
+                   contarRespuestas()
                 }else{
                     //Es incorrecto
+                    respuestas+=1;
+                    console.log(respuestas)
+                    contarRespuestas()
                 }
                 elementoDrop.appendChild(elementoSelect)
             }
         }
 
     })
+
 
 
 
