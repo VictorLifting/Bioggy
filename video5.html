@@ -79,11 +79,17 @@
         </div>
 
     </div>
+    <img src="./src/imgs/cornerVideo.png" alt="" class="corner__video">
 </div>
 
 </body>
 <script src="./scripts/video5.js"></script>
 <script>
+    //obtener nombre
+    var  nombre = document.querySelector('.name');
+
+nombre.innerText= localStorage.getItem('nombre');
+
 
     //Botones----------------
     const next= document.querySelector('.btn--next');

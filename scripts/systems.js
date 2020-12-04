@@ -5,3 +5,7 @@ tarjets [0].addEventListener('click', function(){
     
 });
 
+    //obtener nombre
+    var  nombre = document.querySelector('.name');
+
+    nombre.innerText= localStorage.getItem('nombre');

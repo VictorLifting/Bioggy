@@ -45,7 +45,7 @@
 
             <div class="video__container">
 
-            <video src="./src/videos/ejemplo.mp4" width=800  height=450 controls poster=" ">
+            <video src="./src/videos/fase3.mp4" width=800  height=450 controls poster=" ">
                 Lo sentimos. Este vídeo no puede ser reproducido en tu navegador.<br>
                 La versión descargable está disponible en <a href="URL">Enlace</a>. 
                 </video>
@@ -79,11 +79,17 @@
         </div>
 
     </div>
+    <img src="./src/imgs/cornerVideo.png" alt="" class="corner__video">
 </div>
 
 </body>
 <script src="./scripts/video3.js"></script>
 <script>
+
+        //obtener nombre
+  var  nombre = document.querySelector('.name');
+
+nombre.innerText= localStorage.getItem('nombre');
 //Botones----------------
 const next= document.querySelector('.btn--next');
 const back= document.querySelector('.btn--back');

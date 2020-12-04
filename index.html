@@ -7,9 +7,46 @@
     <title>Bioggy</title>
 </head>
 <body>
+    <img src="./src/imgs/up.png" alt="" class="corner__up">
 
-    <img src="./src/imgs/Bioggy.png" alt="logo" class="logo-Index">
+<div class="logoIndex">
+    <img src="./src/imgs/Bioggy.png" alt="">
+</div>
+
+<form class="form login">
+    <h2 class="form__title">Ingresar</h2>
+
+    <label class="form__label">
+      Nombre
+      <input required type="text" name="Nombre" />
+    </label>
+
+    <p class="form__error hidden">
+      Información inválida.
+    </p>
+
+    <button type="submit">
+      Iniciar
+    </button>
 
     
+  </form>
+
+  <img src="./src/imgs/bottom.png" alt="" class="corner__bottom">
 </body>
+<script>
+    const login = document.querySelector('.login');
+
+
+    login.addEventListener('submit', function (event) {
+
+
+  event.preventDefault();
+
+  const name = login.Nombre.value;
+    localStorage.setItem("nombre", name);
+
+    window.location.href = 'topics.html';
+});
+</script>
 </html>

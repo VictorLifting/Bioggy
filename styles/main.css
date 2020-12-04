@@ -6,6 +6,7 @@
   background-color: white;
   -webkit-box-shadow: 0px 4px 19px rgba(181, 189, 190, 0.24);
           box-shadow: 0px 4px 19px rgba(181, 189, 190, 0.24);
+  margin-bottom: 25px;
 }
 
 .banner__user {
@@ -383,5 +384,67 @@ body {
 
 .hidden {
   display: none;
+}
+
+.form {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 30px;
+  margin: 50px auto;
+}
+
+.form__title {
+  margin-top: 0;
+}
+
+.form__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form__error {
+  color: red;
+  font-weight: 600;
+}
+
+.logoIndex {
+  margin: 5% 40%;
+}
+
+.corner {
+  position: absolute;
+}
+
+.corner__up {
+  position: absolute;
+  top: -30px;
+  left: -20px;
+}
+
+.corner__bottom {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.corner__video {
+  position: absolute;
+  left: -25px;
+  bottom: 0px;
 }
 /*# sourceMappingURL=main.css.map */

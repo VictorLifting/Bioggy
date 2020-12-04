@@ -27,3 +27,62 @@ body{
 .hidden{
     display: none;
 }
+.form {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 30px;
+   margin: 50px auto;
+
+
+
+ // margin-bottom: 30px;
+  
+    &__title {
+      margin-top: 0;
+    }
+  
+    &__label {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+
+    &__error{
+      color: red;
+      font-weight: 600;
+    }
+  }
+
+  .logoIndex{
+      margin: 5% 40%;
+      //background-color: salmon;
+  }
+  .corner{
+      position: absolute;
+
+
+      &__up{
+position: absolute;
+top: -30px;
+left: -20px;
+      }
+
+      &__bottom{
+          position: absolute;
+right: 0px;
+bottom: 0px;
+
+
+      }
+
+      &__video{
+          position: absolute;
+         // background-color: sienna;
+        left: -25px;
+        bottom: 0px;
+    }
+  }
