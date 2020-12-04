@@ -304,8 +304,22 @@
   margin: 0;
 }
 
+.modal-header__2 h2,
+.modal-footer h3 {
+  margin: 0;
+}
+
 .modal-header {
   background: #9C60F4;
+  padding: 15px;
+  color: #fff;
+  font-weight: bolder;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-header__2 {
+  background: #FB292C;
   padding: 15px;
   color: #fff;
   font-weight: bolder;
@@ -319,6 +333,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.modal-body__2 {
+  padding: 10px 20px;
+  background: #fff;
+  display: block;
 }
 
 .modal-footer {
@@ -337,8 +357,22 @@
   color: #fff;
 }
 
+.close2 {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  color: #fff;
+}
+
 .close:hover,
 .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.close2:hover,
+.close2:focus {
   color: #000;
   text-decoration: none;
   cursor: pointer;
