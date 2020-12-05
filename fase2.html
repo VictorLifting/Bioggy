@@ -19,7 +19,9 @@
 
             <p class="name"> David Orozco</p>
 
+ <!--
             <p>Puntaje: <span class="points">1200 px</span></p>
+            -->
 
         </div>
         <div class="banner__profile">
@@ -198,9 +200,13 @@
 </body>
 <script src="./scripts/fase2.js"></script>
 <script src="./scripts/drag.js"></script>
+<script src="./scripts/puntaje.js"></script>
 
 
 <script>
+
+    //puntaje
+    var puntaje =0
 
 var repuestasBuenas =0;
 
@@ -314,9 +320,11 @@ function outsideClick(e) {
                 if (elementoSelect.id === elementoDrop.id) {
                   // console.log("+1")
                    respuestas+=1;
+                   puntajeTotal+=20;
                    repuestasBuenas+=1;
                    contarRespuestas()
                    contarRespuestasBuenas();
+                   puntaje+=20;
                    
                 }else{
                     //Es incorrecto
@@ -332,10 +340,10 @@ function outsideClick(e) {
 
 
 
-        //obtener nombre
-  var  nombre = document.querySelector('.name');
 
-nombre.innerText= localStorage.getItem('nombre');
+
+
+
 
 </script>
 </html>  

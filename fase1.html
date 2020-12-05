@@ -21,7 +21,9 @@
 
                 <p class="name"> David Orozco</p>
 
-                <p>Puntaje: <span class="points">1200 px</span></p>
+ <!--
+            <p>Puntaje: <span class="points">1200 px</span></p>
+            -->
 
             </div>
             <div class="banner__profile">
@@ -172,9 +174,14 @@
 <script src="./scripts/fase1.js"></script>
 <script src="./scripts/modal.js"></script>
 <script src="./scripts/drag.js"></script>
+<script src="./scripts/puntaje.js"></script>
 
 
 <script>
+
+
+//puntaje
+var puntaje=0;
 
     //obtener nombre
     var  nombre = document.querySelector('.name');
@@ -322,7 +329,7 @@ function outsideClick(e) {
             if (elementoDrop.childNodes.length === 0) {
                 if (elementoSelect.id === elementoDrop.id) {
                    console.log(respuestas)
-                  
+                  puntaje+=20;
                    respuestas+=1;
                    repuestasBuenas+=1
                    contarRespuestasBuenas();
@@ -340,6 +347,7 @@ function outsideClick(e) {
         }
 
     })
+
 
 
 

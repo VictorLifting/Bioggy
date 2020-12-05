@@ -19,7 +19,9 @@
 
             <p class="name"> David Orozco</p>
 
+             <!--
             <p>Puntaje: <span class="points">1200 px</span></p>
+            -->
 
         </div>
         <div class="banner__profile">
@@ -44,6 +46,53 @@
 
 
     <div class="interaction">
+        <div class="interaction__opciones" >
+            <div>
+                <div id="1" class="interaction__opciones__opcion">
+                    1
+                </div>
+                <div id="2" class="interaction__opciones__opcion">
+                   2
+                </div>
+            </div>
+
+            <div>
+                <div id="3" class="interaction__opciones__opcion">
+                    3
+                </div>
+                <div id="4" class="interaction__opciones__opcion">
+                    4
+                </div>
+            </div>
+
+            <div>
+                <div id="5" class="interaction__opciones__opcion">
+                    5
+                </div>
+                <div id="6" class="interaction__opciones__opcion">
+                   6
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="interaction__img">
+            <img style="left:250px; top:0px" src="/src/imgs/fase8/preguntas.png" alt="">
+            <div id="1" style="left:647px; top:134px" class="interaction__img__respuesta__2"></div>
+            <div id="2" style="left:647px; top:10px" class="interaction__img__respuesta__2"></div>
+            <div id="3" style="left:647px; top:70px" class="interaction__img__respuesta__2"></div>
+            <div id="4" style="left:647px; top:190px" class="interaction__img__respuesta__2"></div>
+            <div id="5" style="left:647px; top:250px" class="interaction__img__respuesta__2"></div>
+            <div id="6" style="left:647px; top:310px" class="interaction__img__respuesta__2"></div>
+
+
+        </div>
+
+
+
+
+
+
 
 
         <div class="video__btn__2">
@@ -53,26 +102,217 @@
         </div>
     </div>
 
+                    <!--   modal bueno-->
+
+                    <div id="my-modal" class="modal">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <span class="close">&times;</span>
+                            <h2>¡Felicitaciones!</h2>
+                          </div>
+                          <div class="modal-body">
+                              <img src="./src/imgs/logros/logro.png" alt="logro" class="logro-img">
+                              
+                            <p> <b>Contestaste correctamete todas las preguntas</b>   </p>
+                            <!--
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa velit
+                              repudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemo
+                              commodi ab.</p>
+                            -->
+                          </div>
+                          <!--
+                          <div class="modal-footer">
+                            <h3>Modal Footer</h3>
+                          </div>
+                          -->
+                        </div>
+                      </div>
+                    
+                    
+                    
+                      <!-- modal malo-->
+                    
+                      <div id="my-modal2" class="modal">
+                        <div class="modal-content">
+                          <div class="modal-header__2">
+                            <span class="close2">&times;</span>
+                            <h2>¡Casi lo logras!</h2>
+                          </div>
+                          <div class="modal-body__2">
+                              
+                              
+                            <p> <b>Contestaste incorrectamete algunas preguntas, las respuestas correctas eran: </b>   </p>
+                            <img src="./src/imgs/fase8/correctas.png" alt="logro" class=" ">
+                            <!--
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla repellendus nisi, sunt consectetur ipsa velit
+                              repudiandae aperiam modi quisquam nihil nam asperiores doloremque mollitia dolor deleniti quibusdam nemo
+                              commodi ab.</p>
+                            -->
+                          </div>
+                          <!--
+                          <div class="modal-footer">
+                            <h3>Modal Footer</h3>
+                          </div>
+                          -->
+                        </div>
+
+
+
+
 </div>
 
 
 
 </body>
-<script src="./scripts/fase8.js"></script>
+
+<script src="./scripts/drag.js"></script>
 
 <script>
+
+//contador respuestas
+var repuestasBuenas =0;
+
+const nextbtn = document.querySelector('.btn--next');
+
+
+var respuestas = 0;
+
+
+function contarRespuestas(){
+
+if(respuestas===6){
+
+console.log("siguientes")
+nextbtn.classList.remove('hidden');
+
+if(repuestasBuenas!=6){
+   modal2.style.display = 'block';
+   console.log("perdiste")
+}
+
+}
+
+}
+
+//contar respuestas buenas
+
+
+
+
+
+function contarRespuestasBuenas (){
+
+if(repuestasBuenas===6){
+
+   modal.style.display = 'block';
+
+}
+
+}
+
+
+
+
+    ////MODAL-----------
+
+
+    // Get DOM Elements
+    const modal = document.querySelector('#my-modal');
+const modal2 = document.querySelector('#my-modal2');
+
+
+const closeBtn = document.querySelector('.close');
+const closeBtn2 = document.querySelector('.close2');
+
+// Events
+
+closeBtn.addEventListener('click', closeModal);
+closeBtn2.addEventListener('click', closeModal2);
+window.addEventListener('click', outsideClick);
+
+// Open
+function openModal() {
+  modal.style.display = 'block';
+}
+
+// Close
+function closeModal() {
+  modal.style.display = 'none';
+  
+
+}
+
+function closeModal2() {
+  modal2.style.display = 'none';
+  
+
+}
+
+// Close If Outside Click
+function outsideClick(e) {
+  if (e.target == modal) {
+    modal.style.display = 'none';
+  }
+  if (e.target == modal2) {
+    modal2.style.display = 'none';
+  }
+}
+
+
+
      //botones----------------------------
      const next= document.querySelector('.btn--next');
     const back= document.querySelector('.btn--back');
 
    next.addEventListener('click',function(){
-   window.location.href="video8.html";
+   window.location.href=" .html";
     });
 
 
     back.addEventListener('click',function(){
     window.location.href="video8.html";
     });
+
+
+  ///drag and drop
+
+    
+  var interaction__opciones = document.querySelectorAll(".interaction__opciones__opcion");
+    var interaction__respuestas = document.querySelectorAll(".interaction__img__respuesta__2");
+    var containerOpciones = document.querySelector(".interaction__opciones");
+
+    console.log(interaction__opciones)
+
+    var managerDrap = new DragAndDrop();
+
+    managerDrap.addDrag(interaction__opciones);
+    managerDrap.addDrop(interaction__respuestas);
+    managerDrap.addDrop([containerOpciones])
+
+    managerDrap.setOnDrog((elementoDrop, elementoSelect) => {
+        if (elementoDrop.className === "interaction__opciones") {
+            elementoDrop.appendChild(elementoSelect)
+        } else {
+            if (elementoDrop.childNodes.length === 0) {
+                if (elementoSelect.id === elementoDrop.id) {
+                    
+                    respuestas+=1;
+                    repuestasBuenas+=1;
+                   contarRespuestas()
+                   contarRespuestasBuenas();
+                }else{
+                    //Es incorrecto
+                    respuestas+=1;
+                   contarRespuestas()
+                }
+                elementoDrop.appendChild(elementoSelect)
+            }
+        }
+
+    })
+
+
+
 
 
         //obtener nombre

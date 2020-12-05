@@ -19,10 +19,10 @@
 
             <p class="name"> David Orozco</p>
 
-            <!--
+ <!--
             <p>Puntaje: <span class="points">1200 px</span></p>
             -->
-            
+
         </div>
         <div class="banner__profile">
             <img src="./src/imgs/perfil.png" alt="perfil">
@@ -36,21 +36,19 @@
 
 
 <article class="intro">
-    <img src="./src/imgs/digestivo-grande.png" alt="">
-    <div class="intro__info">
-        <div class="intro__content"> 
-        <p class="intro__title">Sistema digestivo</p>
-        <p class="intro__subtitle">¿Qué es?</p>
-        <p class="intro_text">Conjunto de órganos que procesan los alimentos y los líquidos 
-            para descomponerlos en sustancias que el cuerpo usa como fuente de energía, 
-            o para el crecimiento y la reparación de tejidos. </p>
-        </div>
 
+
+    <div class="intro__info2">
+
+    <div>
+        <img src="./src/imgs/finish.png" alt="">
+
+            
         <div class="video__btn">
-            <img src="./src/imgs/back.svg" alt="" class="btn btn--back">
             <img src="./src/imgs/next.svg" alt="" class="btn btn--next">
             
         </div>
+    </div>
     </div>
 
 
@@ -59,5 +57,20 @@
 
 
 </body>
-<script src="./scripts/intro1.js"></script>
+<script>
+    var next =document.querySelector('.btn--next')
+
+    next.addEventListener('click', function(){
+        window.location= "topics.html"
+
+    })
+
+    //obtener nombre
+    var  nombre = document.querySelector('.name');
+
+nombre.innerText= localStorage.getItem('nombre');
+
+
+
+</script>
 </html>  
